@@ -131,6 +131,7 @@ test("every delivery has a clean route that earns all three stars", () => {
     assert.equal(f.crates.size, lv.crates.length, `level ${i + 1} crates`);
     assert.equal(f.gates.size, lv.gates.length, `level ${i + 1} gates`);
     assert.equal(f.stars(), 3, `level ${i + 1}`);
+    for (const k of [...lv.crates, ...lv.gates]) assert.ok(k.x > 20 && k.x < 370 && k.y > 50 && k.y < 625, `level ${i + 1} stays on screen`);
   }
 });
 

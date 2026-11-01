@@ -42,6 +42,7 @@ function bestRoute(level) {
       const path = [];
       while (f.state === "flying") { f.step(); path.push([f.x, f.y]); }
       if (f.state !== "docked" || path.length < 60) continue;
+      if (path.some(([x, y]) => x < 22 || x > W - 22 || y < 56 || y > H - 20)) continue;
       let len = 0;
       for (let k = 1; k < path.length; k++) len += dist(path[k - 1][0], path[k - 1][1], path[k][0], path[k][1]);
       const bend = len / dist(level.start.x, level.start.y, level.dock.x, level.dock.y);

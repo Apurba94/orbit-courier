@@ -125,7 +125,8 @@ class Fly extends Scene {
         c.lineWidth = 1;
         c.beginPath();
         c.moveTo(x, y);
-        c.lineTo(x + (ax / 180) * 12, y + (ay / 180) * 12);
+        const a = Math.hypot(ax, ay);
+        c.lineTo(x + (ax / a) * m * 14, y + (ay / a) * m * 14);
         c.stroke();
       }
     }
