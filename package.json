@@ -1,0 +1,11 @@
+{
+  "name": "orbit-courier",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "description": "Fling a parcel ship around planets with real gravity and land it on the dock with as little fuel as possible.",
+  "scripts": {
+    "test": "node --test"
+  }
+}
